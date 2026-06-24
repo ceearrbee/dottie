@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dottie</title>
+<link rel="icon" href="mobile-icon.png">
+<style>
+  :root{
+    --indigo:#5B5BD6; --indigo-dark:#3F3FA8; --ink:#1b1b1f; --muted:#5a5a66;
+    --bg:#f4f3ff; --card:#ffffff; --line:#e4e2f5;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;
+    color:var(--ink); background:
+      radial-gradient(1200px 600px at 80% -10%, #e9e7ff 0, transparent 60%),
+      radial-gradient(900px 500px at -10% 110%, #fde8f3 0, transparent 55%),
+      var(--bg);
+    min-height:100dvh; line-height:1.55;
+  }
+  .wrap{max-width:760px; margin:0 auto; padding:48px 24px 80px}
+  header{display:flex; align-items:center; gap:18px; margin-bottom:8px}
+  header img{width:72px; height:72px; border-radius:22px; box-shadow:0 8px 24px rgba(91,91,214,.28)}
+  h1{font-size:clamp(2.2rem,6vw,3rem); margin:0; letter-spacing:-.02em}
+  .tag{color:var(--muted); font-size:1.05rem; margin:2px 0 0}
+  .card{
+    background:var(--card); border:1px solid var(--line); border-radius:28px;
+    padding:28px; margin-top:28px; box-shadow:0 2px 0 rgba(91,91,214,.04);
+  }
+  .pill{
+    display:inline-block; font-size:.78rem; font-weight:600; letter-spacing:.04em;
+    text-transform:uppercase; color:var(--indigo-dark); background:#ecebff;
+    border-radius:999px; padding:5px 12px; margin-bottom:14px;
+  }
+  p{margin:.6em 0}
+  a{color:var(--indigo-dark); text-underline-offset:3px}
+  .links{display:flex; flex-wrap:wrap; gap:12px; margin-top:26px}
+  .links a{
+    text-decoration:none; font-weight:600; color:#fff; background:var(--indigo);
+    padding:12px 20px; border-radius:16px; box-shadow:0 6px 16px rgba(91,91,214,.3);
+    transition:transform .12s ease, box-shadow .12s ease;
+  }
+  .links a.ghost{background:#fff; color:var(--indigo-dark); border:1px solid var(--line); box-shadow:none}
+  .links a:hover{transform:translateY(-2px); box-shadow:0 10px 22px rgba(91,91,214,.34)}
+  footer{margin-top:40px; color:var(--muted); font-size:.9rem}
+  .dots span{display:inline-block; width:9px; height:9px; border-radius:50%; background:var(--indigo); margin-right:5px; opacity:.9}
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img src="mobile-icon.png" alt="Dottie logo">
+      <div>
+        <h1>Dottie</h1>
+        <p class="tag"><span class="dots"><span></span><span></span><span></span></span>A cosy Matrix chat client.</p>
+      </div>
+    </header>
+
+    <div class="card">
+      <span class="pill">About</span>
+      <p><strong>Dottie</strong> is a personal, open-source fork of
+      <a href="https://github.com/element-hq/element-x-android">Element X Android</a> — a secure
+      <a href="https://matrix.org">Matrix</a> messenger. It talks to whichever homeserver you sign in to;
+      it isn't a service run by anyone, just an app you install.</p>
+      <p>Source code lives at <a href="https://github.com/ceearrbee/dottie">github.com/ceearrbee/dottie</a>.</p>
+    </div>
+
+    <div class="card">
+      <span class="pill">The boring-but-important bits</span>
+      <p>These pages exist so sign-in providers and curious people can find the policies for the app:</p>
+      <div class="links">
+        <a href="privacy">Privacy</a>
+        <a class="ghost" href="acceptable-use">Acceptable Use</a>
+        <a class="ghost" href="https://github.com/ceearrbee/dottie">Source on GitHub</a>
+      </div>
+    </div>
+
+    <footer>
+      Dottie is a fork of Element X Android and is not affiliated with or endorsed by Element / New Vector Ltd.
+    </footer>
+  </div>
+</body>
+</html>

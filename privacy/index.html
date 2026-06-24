@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dottie — Privacy</title>
+<link rel="icon" href="../mobile-icon.png">
+<style>
+  :root{--indigo:#5B5BD6;--indigo-dark:#3F3FA8;--ink:#1b1b1f;--muted:#5a5a66;--bg:#f4f3ff;--card:#fff;--line:#e4e2f5}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui,sans-serif;color:var(--ink);
+    background:radial-gradient(1200px 600px at 80% -10%,#e9e7ff 0,transparent 60%),var(--bg);min-height:100dvh;line-height:1.6}
+  .wrap{max-width:720px;margin:0 auto;padding:40px 24px 80px}
+  a{color:var(--indigo-dark);text-underline-offset:3px}
+  .back{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:600;margin-bottom:18px}
+  .back img{width:34px;height:34px;border-radius:11px}
+  h1{font-size:clamp(1.8rem,5vw,2.4rem);letter-spacing:-.02em;margin:.2em 0}
+  h2{margin-top:1.8em;font-size:1.15rem}
+  .updated{color:var(--muted);font-size:.9rem;margin-top:0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:26px 28px;margin-top:18px}
+  ul{padding-left:1.2em}
+  footer{margin-top:36px;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <a class="back" href="../"><img src="../mobile-icon.png" alt="">Dottie</a>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: June 2026</p>
+
+  <div class="card">
+    <p><strong>Dottie</strong> is a personal, open-source fork of
+    <a href="https://github.com/element-hq/element-x-android">Element X Android</a>, a
+    <a href="https://matrix.org">Matrix</a> client. It is an app you install on your own device.
+    The people who build Dottie do not run any servers and do not receive your messages, contacts, or account data.</p>
+
+    <h2>Where your data goes</h2>
+    <p>When you sign in, you choose a Matrix <em>homeserver</em>. All of your messages, media, profile
+    information, and account data are handled by <strong>that homeserver and the people who operate it</strong>,
+    under <em>their</em> privacy policy — not Dottie's. Matrix conversations are end-to-end encrypted where supported.</p>
+
+    <h2>What Dottie itself collects</h2>
+    <ul>
+      <li><strong>Analytics:</strong> none. This fork ships with analytics (PostHog) and crash reporting (Sentry) disabled.</li>
+      <li><strong>Accounts:</strong> Dottie has no accounts of its own and no backend. Nothing is sent to the app's authors.</li>
+      <li><strong>On-device data:</strong> session keys, cached messages, and settings are stored locally on your device
+      so the app can work, and are removed when you sign out or uninstall.</li>
+    </ul>
+
+    <h2>Third parties</h2>
+    <p>Optional features you turn on may contact third parties you choose — for example a push gateway for
+    notifications, or a map provider for location sharing. Sign-in uses your homeserver's authentication service.
+    Each is governed by its own provider's policy.</p>
+
+    <h2>Contact</h2>
+    <p>Questions or issues can be raised at
+    <a href="https://github.com/ceearrbee/dottie/issues">github.com/ceearrbee/dottie/issues</a>.</p>
+  </div>
+
+  <footer>Dottie is a fork of Element X Android and is not affiliated with or endorsed by Element / New Vector Ltd.</footer>
+</div>
+</body>
+</html>
